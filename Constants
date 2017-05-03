@@ -1,0 +1,4 @@
+Scenarios-1 : If we want to share all Constants across application , we can define it in Interface static varibles .
+
+Scenarios2: If Constants are shared only class specific we can define it in Implementaion class leve.
+
