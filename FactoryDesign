@@ -11,6 +11,9 @@ Factory : Main Interface & N no of Implementations
 
 call the factory method , that will take specific handler above 4.
 
+How to call Abstract Class to get the Handler:
+
  handler = FruitFactory.getProcessHandler("String");
 
+Once we have Handler , Process Implementation Method.
  handler.processBureauInquiry(bureauInquiry);
