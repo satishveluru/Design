@@ -1,0 +1,16 @@
+Good Design  Code Practise :
+*****************************
+
+####
+Desing 1
+
+Factory : Main Interface & N no of Implementations
+1. Names   : Iprocesshandler and AppleProcessHandler & OrangeProcessHandler &  & bananaProcessHandler & kiwiProcessHandler.
+
+2. write a abstract class : FruitFactory ( Which we cannot instantiate) and has method getProcessHandler , to get the each fruit handler.
+
+call the factory method , that will take specific handler above 4.
+
+ handler = FruitFactory.getProcessHandler("String");
+
+ handler.processBureauInquiry(bureauInquiry);
