@@ -1,0 +1,12 @@
+This will explain how we can write conditional code in differnt way.
+
+1. Conditional checking for String
+
+2. Conditional checking for boolean
+
+                          return timout=(failfast?1:-1);  retun long
+                          return initializationFailTimeout > 0;  return boolean;
+                          return text == null ? null : text.trim().isEmpty() ? null : text.trim();  return string ; 
+
+2. conditional checking for numbers
+
