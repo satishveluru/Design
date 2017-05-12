@@ -2,3 +2,11 @@ Scenarios-1 : If we want to share all Constants across application , we can defi
 
 Scenarios2: If Constants are shared only class specific we can define it in Implementaion class leve.
 
+
+
+Example :
+Time Related changes :
+private static final long CONNECTION_TIMEOUT= SECONDS.toMillis(30);
+                                                SECONDS.toMillis(5);
+                                                MINUTES.toMillis(10);
+                                                MINUTES.toMillis(30);
