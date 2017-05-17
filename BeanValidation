@@ -7,8 +7,7 @@ import java.util.Set;
 @Configuration
 @DependsOn("TestClass")
 public class BeanConfig {
-   private static final Logger LOG = LoggerFactory.getLogger(ValidEnumConfig.class);
-
+ 
    @Autowired
    private somevalidationclass somevalidationclass;
 
@@ -16,8 +15,7 @@ public class BeanConfig {
    public void checkEnum() {
       Set<String> errorSet = new HashSet<String>();
 
-      // check phoneType
-      for (somevalidationclass values : somevalidationclass.values()) {
+  for (somevalidationclass values : somevalidationclass.values()) {
          ClassType classType = values.findByID(values.toDbValueCd());
          if (classType == null) {
             errorSet.add("Validationclass: ");
