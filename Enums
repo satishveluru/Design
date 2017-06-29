@@ -4,7 +4,8 @@ ENUMS:
 
 1. Basic Enum values : public enum Users {LAKE,GREEN}; we can use it as simple string validation.
 
-2. ENUM+ Instance filed : public enum Users(CHERRY('Michigan'),APPLE('Michigan') private string location ; );
+2. ENUM+ Instance filed : public enum Users(CHERRY('Michigan'),APPLE('Michigan') private string location ; '
+ Users(String location){this.location =location;} public String getlocation(){return location;};
 Usage:  System.out.println(Users.CHERRY.location;
 
 3. ENUM+Method+SomeLogic:
