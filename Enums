@@ -1,4 +1,47 @@
-1. Validate Enum values with Database records or look up???
+Reference URL : https://www.mkyong.com/java/java-enum-example/
+ENUMS:
+******
+
+1. Basic Enum values : public enum Users {WORK,TEST}; we can use it as simple string validation.
+
+2. ENUM+ Instance filed : public enum Users(SATISH('Michigan'),VINEELA('Michigan') private string location ; );
+
+3. ENUM+Method+SomeLogic:
+public enum Operation {
+    PLUS,
+    MINUS,
+    TIMES,
+    DIVIDE;
+
+    double calculate(double x, double y) {
+        switch (this) {
+            case PLUS:
+                return x + y;
+            case MINUS:
+                return x - y;
+            case TIMES:
+                return x * y;
+            case DIVIDE:
+                return x / y;
+            default:
+                throw new AssertionError("Unknown operations " + this);
+        }
+    }
+
+}
+
+public class Test {
+
+    public static void main(String[] args) {
+
+        double result = Operation.PLUS.calculate(1, 2);
+        System.out.println(result); //3.0
+
+    }
+
+}
+
+1.Validate Enum values with Database records or look up???
 
 2. we can use it for String validation ???
 or String with valuescombination  or assign values to it 
