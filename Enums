@@ -2,9 +2,10 @@ Reference URL : https://www.mkyong.com/java/java-enum-example/
 ENUMS:
 ******
 
-1. Basic Enum values : public enum Users {WORK,TEST}; we can use it as simple string validation.
+1. Basic Enum values : public enum Users {LAKE,GREEN}; we can use it as simple string validation.
 
-2. ENUM+ Instance filed : public enum Users(SATISH('Michigan'),VINEELA('Michigan') private string location ; );
+2. ENUM+ Instance filed : public enum Users(CHERRY('Michigan'),APPLE('Michigan') private string location ; );
+Usage:  System.out.println(Users.CHERRY.location;
 
 3. ENUM+Method+SomeLogic:
 public enum Operation {
@@ -41,6 +42,19 @@ public class Test {
 
 }
 
+
+4. Loop ENUM Object 
+for (UserStatus status : UserStatus.values()) {
+            System.out.println(status);
+        }
+5. Compare 
+ Users us= Users.CHERRY
+
+        if(rir == Users.CHERRY
+            System.out.println("This is APNIC : " + rir.url());
+        }
+
+        
 1.Validate Enum values with Database records or look up???
 
 2. we can use it for String validation ???
