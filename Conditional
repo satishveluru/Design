@@ -8,5 +8,18 @@ This will explain how we can write conditional code in differnt way.
                           return initializationFailTimeout > 0;  return boolean;
                           return text == null ? null : text.trim().isEmpty() ? null : text.trim();  return string ; 
 
-2. conditional checking for numbers
+3. conditional checking for numbers
+
+4. Conditional checking for numerics 
+   
+   private static final long CONNECTION_TIMEOUT = SECONDS.toMillis(30);
+   private static final long VALIDATION_TIMEOUT = SECONDS.toMillis(5);
+   private static final long IDLE_TIMEOUT = MINUTES.toMillis(10);
+   private static final long MAX_LIFETIME = MINUTES.toMillis(30);
+   private static final long MAX_LIFETIME = MINUTES.toMillis(30);
+ 
+     if (maxLifetime != 0 && maxLifetime < SECONDS.toMillis(30)) {
+         LOGGER.warn("{} - maxLifetime is less than 30000ms, setting to default {}ms.", poolName, MAX_LIFETIME);
+         maxLifetime = MAX_LIFETIME;
+      }
 
