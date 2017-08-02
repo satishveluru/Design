@@ -17,3 +17,26 @@ How to call Abstract Class to get the Handler:
 
 Once we have Handler , Process Implementation Method.
  handler.processBureauInquiry(bureauInquiry);
+
+
+
+Desing 1:
+
+Factory Pattern : One Interface & and four Implementation.
+Names   : Iprocesshandler which is implemented in all four classes
+
+Abstract class Factory : process factory
+
+call the factory method , that will take specific  String and get each handler above 4.
+
+*****
+ handler = processRequestFactory.getProcessHandler("StringtoGetEachProcessor");
+*****
+ handler.processrequest(Inquiry);
+*****
+
+
+Load IrequestProcess in all process 
+***********************************
+Iprocessrequest = new processrequestImpl();
+andd this request in collection.
