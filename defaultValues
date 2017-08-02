@@ -10,3 +10,12 @@ double 	0.0d
 char 	'\u0000'
 String (or any object)   	null
 boolean 	false
+
+
+Comparing each other values in language :
+ comparing string to string
+ comparing int to int
+ comparing long to long
+ comparing float to float 
+ 
+ 
