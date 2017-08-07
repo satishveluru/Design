@@ -1,1 +1,6 @@
 
+1. we are going to have method to print out message using formatter ---- 
+
+2. Exceptional logic in rest client or applciation logic , how are we going to handle Exception logics???
+
+3. Check loghelper classed ... Singleton and static methods to access it . (Eg: org.hibernate.ejb.util)
