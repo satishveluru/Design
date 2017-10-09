@@ -98,6 +98,45 @@ TYPE WHICH IN TRUN DELEGATED USES A DIFFERENT IMPLEMENATION OF GIVEN A/I
 java.lang.reflect.proxy
 java.rmi.*
 
+Creational patterns
+
+
+Abstract factory (recognizeable by creational methods returning the factory itself which in turn can be used to create another abstract/interface type)
+
+    javax.xml.parsers.DocumentBuilderFactory#newInstance()
+    javax.xml.transform.TransformerFactory#newInstance()
+    javax.xml.xpath.XPathFactory#newInstance()
+
+
+Builder (recognizeable by creational methods returning the instance itself)
+
+    java.lang.StringBuilder#append() (unsynchronized)
+    java.lang.StringBuffer#append() (synchronized)
+    java.nio.ByteBuffer#put() (also on CharBuffer, ShortBuffer, IntBuffer, LongBuffer, FloatBuffer and DoubleBuffer)
+    javax.swing.GroupLayout.Group#addComponent()
+    All implementations of java.lang.Appendable
+
+Factory method (recognizeable by creational methods returning an implementation of an abstract/interface type)
+
+    java.util.Calendar#getInstance()
+    java.util.ResourceBundle#getBundle()
+    java.text.NumberFormat#getInstance()
+    java.nio.charset.Charset#forName()
+    java.net.URLStreamHandlerFactory#createURLStreamHandler(String) (Returns singleton object per protocol)
+    java.util.EnumSet#of()
+    javax.xml.bind.JAXBContext#createMarshaller() and other similar methods
+
+Prototype (recognizeable by creational methods returning a different instance of itself with the same properties)
+
+    java.lang.Object#clone() (the class has to implement java.lang.Cloneable)
+
+Singleton (recognizeable by creational methods returning the same instance (usually of itself) everytime)
+
+    java.lang.Runtime#getRuntime()
+    java.awt.Desktop#getDesktop()
+    java.lang.System#getSecurityManager()
+
+
 Behavioral patterns
 ********************************************************************************
 
