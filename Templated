@@ -1,0 +1,25 @@
+/**
+ * static Singleton instance.
+ */
+private static volatile ${enclosing_type} instance;
+
+/**
+ * Private constructor for singleton.
+ */
+private ${enclosing_type}() {
+}
+
+/**
+ * Return a singleton instance of ${enclosing_type}.
+ */
+public static ${enclosing_type} getInstance() {
+    // Double lock for thread safety.
+    if (instance == null) {
+        synchronized(${enclosing_type}.class){
+            if (instance == null) {
+                instance = new ${enclosing_type}();
+            }
+        }
+    }
+    return instance;
+}
