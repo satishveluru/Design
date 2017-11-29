@@ -1,3 +1,37 @@
+Introduction On Enums:
+ 
+ 1) No Type-Safety: First of all it’s not type-safe; you can assign any valid int value to currency e.g. 99 
+     though there is no coin to represent that value.
+ 2) No Meaningful Printing: printing value of any of these constant will print its numeric value 
+     instead of meaningful name of coin e.g. when you print NICKLE it will print "5" instead of "NICKLE"
+ 3) No namespace: to access the currencyDenom constant we need to prefix class name e.g. CurrencyDenom.PENNY instead of just using PENNY though this can also be achieved by using static import in JDK 1.5
+
+Advantages of Enums:
+**********************
+
+Java Enum is the answer of all this limitation. 
+Enum in Java is type-safe, provides meaningful String names and has their own namespace. 
+Now let's see the same example using Enum in Java:
+
+Read more: http://javarevisited.blogspot.com/2011/08/enum-in-java-example-tutorial.html#ixzz4zqvTXBoZ
+
+public enum Currency {PENNY, NICKLE, DIME, QUARTER};  //all are Enum Constants ,Enum is a type like class and interface in Java
+
+Point -1 :
+***********
+
+public enum Currency {
+PENNY, NICKLE, DIME, QUARTER
+};
+Currency coin = Currency.PENNY;
+coin = 1; //compilation error
+
+Point -2 :
+2) Enum in Java are reference types like class or interface and you can define constructor, 
+   methods and variables inside java Enum which makes it more powerful than Enum in
+   C and C++ as shown in next example of Java Enum type.
+
+
 Reference URL : https://www.mkyong.com/java/java-enum-example/
 ENUMS:
 ******
