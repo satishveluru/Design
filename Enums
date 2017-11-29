@@ -46,6 +46,13 @@ method for every enum in java. Values() method returns array of
 Enum constants in the same order they have listed in Enum and you can use values() 
 to iterate over values of Enum  in Java as shown in below example:
 
+
+Point-5:
+
+Two new collection classes EnumMap and EnumSet are added into collection package to support Java Enum. 
+These classes are a high-performance implementation of Map and Set interface in Java and we 
+should use this whenever there is any opportunity.
+
 for(Currency coin: Currency.values()){
    System.out.println("coin: " + coin);
 }
