@@ -39,7 +39,7 @@ public interface InterfaceQueueService<T extends QueueItemWO> {
 }
 This interface has two implementations .
 
-public class EnrollmentQueueService extends BaseService implements InterfaceQueueService<CapsWO> {}  -- note here we are not passing abstract class ,its concreate class 
+public class EnrollmentQueueService extends BaseService implements InterfaceQueueService<SalesWO> {}  -- note here we are not passing abstract class ,its concreate class 
 SalesWO is extends QueueItemWO(this is a concrete implmentation for an abstact class QueueItemWO ) 
-public class PatmentQueueService extends BaseService implements InterfaceQueueService<CrmWO> {}   -- note here we are not passing abstract class ,its concreate class
+public class PatmentQueueService extends BaseService implements InterfaceQueueService<PaymentWO> {}   -- note here we are not passing abstract class ,its concreate class
 PaymentWO is extends QueueItemWO( this is a concrete implmentation for an abstact class QueueItemWO ) 
