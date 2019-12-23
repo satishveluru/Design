@@ -1,0 +1,45 @@
+******************************************
+How do we create multiple class implementing using single interface forcing compile time class type ????
+Forcing compile time class check ???? How ??
+we are going to add abstract class QueueItemWO  --- which has 10 abstract methods  mostly getter and setter .
+which class has to implement all those abstract methods ??? is it interface it is implmenting or of the type which is passing run time .
+So abstract class and its implementation classes are separate . 
+	
+	Declaration 	
+	Abstract class (Y)	
+	Interface (X)				Note: Interface Declaration will have abstraction class
+		
+Implementation 	A extends X		Note : Implementation will have concrete classes.
+				B Extends X 	
+
+
+step1 :  
+ 
+public abstract class QueueItemWO implements  Comparable<QueueItemWO>, Serializable { 
+// all common business functional methods to different functionalities  / like getjobname ..etc 
+}
+
+public class SalesWO extends QueueItemWO { 
+// constructor based 
+// Override  all the interface method 
+
+}
+public class PaymentWO extends QueueItemWO { 
+// constructor based 
+// Override  all the interface method 
+}
+
+Step2 : 
+
+public interface InterfaceQueueService<T extends QueueItemWO> { 
+// add additional methods other than to QueueItemWO 
+    public T getQueue(String Id);
+    public T save(T QueueItem);  
+    public T create();
+}
+This interface has two implementations .
+
+public class EnrollmentQueueService extends BaseService implements InterfaceQueueService<CapsWO> {}  -- note here we are not passing abstract class ,its concreate class 
+SalesWO is extends QueueItemWO(this is a concrete implmentation for an abstact class QueueItemWO ) 
+public class PatmentQueueService extends BaseService implements InterfaceQueueService<CrmWO> {}   -- note here we are not passing abstract class ,its concreate class
+PaymentWO is extends QueueItemWO( this is a concrete implmentation for an abstact class QueueItemWO ) 
