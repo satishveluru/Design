@@ -1,0 +1,44 @@
+***** Problem *** 
+How do we  instantiations of this class where T and Q are related. 
+For instance, if T is AppleType, then I want Q to be AppleQuery and not OrangeQuery.
+public class FruitManager<T extends Type , Q extends Query>{
+    T create(T t);
+    Collection<T> read(Q query);
+    T update(T t);
+}
+
+
+
+************ Solutions 1 *****
+
+public abstract class Type {
+ }
+
+public class AppleType extends Type {
+ }
+
+public abstract class Query<T extends Type> {
+    public abstract T doQuery(); 
+}
+
+public class AppleQuery extends Query<AppleType> {
+    public AppleType doQuery();
+}
+
+public class FruitManager<T extends Type, Q extends Query<T>> {
+    T read(Q id);
+}
+
+
+
+
+************ Solutions 2 *****
+
+interface FruitManager<T extends Type>
+T read(Query<? extends T> query)
+    
+
+interface Type
+interface Query<T extends Type>
+
+****************
